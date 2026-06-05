@@ -1,0 +1,1985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motherland Cafe | Menu</title>
+    
+    <!-- SEO Dual Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Motherland Cafe - Kyd Street",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Block-D, A/3 Dr. Md. Ishaque Road",
+        "addressLocality": "Kolkata",
+        "addressRegion": "WB",
+        "postalCode": "700016",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-9748077790"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Motherland Cafe - Southern Avenue",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Southern Avenue",
+        "addressLocality": "Kolkata",
+        "addressRegion": "WB",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-9748077790"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#525A4B',
+                        menu: '#FDFCF0',
+                        accent: '#D5C7B5'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #D5C7B5; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-menu text-primary font-sans antialiased overflow-x-hidden">
+    <header class="bg-primary text-menu rounded-b-[1.5rem] md:rounded-b-[3rem] shadow-xl relative z-10 overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, #D5C7B5 1px, transparent 0); background-size: 32px 32px;"></div>
+        <div class="max-w-7xl mx-auto px-4 py-5 md:px-6 md:py-16 lg:py-20 flex flex-col items-center text-center relative z-20">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="h-8 md:h-16 lg:h-20 mb-2 md:mb-8 fill-current object-contain">
+                <rect x="44" y="5" width="12" height="90" />
+                <rect x="44" y="5" width="12" height="90" transform="rotate(60 50 50)" />
+                <rect x="44" y="5" width="12" height="90" transform="rotate(120 50 50)" />
+            </svg>
+            <h1 class="text-xl sm:text-2xl md:text-5xl lg:text-6xl font-serif mb-1.5 md:mb-6 font-medium tracking-tight">Welcome to Motherland Cafe</h1>
+            <p class="text-accent max-w-2xl mx-auto text-xs sm:text-sm md:text-lg font-medium tracking-wide px-2">Artisanal blends, handcrafted tartines, and guilt-free desserts.</p>
+        </div>
+    </header>
+
+    <main class="max-w-[90rem] mx-auto px-4 sm:px-6 py-8 md:py-12 -mt-4 md:-mt-8 relative z-20">
+        <div class="flex justify-center mb-6 md:mb-10">
+            <div class="bg-menu p-1.5 rounded-full flex shadow-lg border border-accent/60 backdrop-blur-sm">
+                <button id="btn-kyd" onclick="toggleLocation('kyd')" class="px-6 md:px-8 py-3 rounded-full font-semibold transition-all duration-300 bg-primary text-menu shadow-md text-sm md:text-base whitespace-nowrap">
+                    📍 Kyd Street
+                </button>
+                <button id="btn-southern" onclick="toggleLocation('southern')" class="px-6 md:px-8 py-3 rounded-full font-semibold transition-all duration-300 text-primary hover:bg-primary/5 text-sm md:text-base whitespace-nowrap">
+                    📍 Southern Avenue
+                </button>
+            </div>
+        </div>
+
+        <!-- Sticky Navigation Bar Container -->
+        <div class="sticky top-4 z-40 mb-12 flex flex-wrap justify-center px-4 gap-3 md:gap-4 max-w-4xl mx-auto" id="nav-container">
+            
+            <!-- Price/Sort Dropdown -->
+            <div class="relative flex-1 sm:flex-none sm:flex-shrink-0 z-50">
+                <button id="price-dropdown-btn" onclick="togglePriceDropdown()" class="w-full px-4 md:px-6 py-3 md:py-3.5 bg-white/95 backdrop-blur-md rounded-full shadow-md border border-accent/60 flex flex-nowrap justify-between items-center text-primary font-semibold transition-all text-sm md:text-base">
+                    <svg class="w-4 h-4 md:w-5 md:h-5 sm:mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path></svg>
+                    <span id="price-dropdown-text" class="hidden sm:inline-block whitespace-nowrap">Filter & Sort</span>
+                </button>
+                <div id="price-dropdown-menu" class="absolute left-0 mt-3 w-56 bg-white rounded-[2rem] shadow-xl border border-accent/30 overflow-hidden opacity-0 pointer-events-none transform -translate-y-4 transition-all duration-300 z-[60]">
+                    <div class="py-3 flex flex-col">
+                        <div class="px-5 py-2 text-[10px] font-bold text-accent uppercase tracking-widest">Price</div>
+                        <button onclick="setPriceFilter('all')" class="w-full text-left px-6 py-2.5 font-bold text-sm bg-primary/10 text-primary transition-colors price-filter-btn" data-filter="all">All Prices</button>
+                        <button onclick="setPriceFilter('budget')" class="w-full text-left px-6 py-2.5 font-medium text-sm text-primary/80 hover:bg-primary/5 hover:text-primary transition-colors price-filter-btn" data-filter="budget">Budget (&lt; &#8377;300)</button>
+                        <button onclick="setPriceFilter('premium')" class="w-full text-left px-6 py-2.5 font-medium text-sm text-primary/80 hover:bg-primary/5 hover:text-primary transition-colors price-filter-btn" data-filter="premium">Premium (&#8377;300+)</button>
+                        
+                        <div class="border-t border-accent/20 mx-4 my-2"></div>
+                        
+                        <div class="px-5 py-2 text-[10px] font-bold text-accent uppercase tracking-widest">Sort</div>
+                        <button onclick="setPriceSort('default')" class="w-full text-left px-6 py-2.5 font-bold text-sm bg-primary/10 text-primary transition-colors price-sort-btn" data-sort="default">Default Order</button>
+                        <button onclick="setPriceSort('asc')" class="w-full text-left px-6 py-2.5 font-medium text-sm text-primary/80 hover:bg-primary/5 hover:text-primary transition-colors price-sort-btn" data-sort="asc">Price: Low to High</button>
+                        <button onclick="setPriceSort('desc')" class="w-full text-left px-6 py-2.5 font-medium text-sm text-primary/80 hover:bg-primary/5 hover:text-primary transition-colors price-sort-btn" data-sort="desc">Price: High to Low</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative flex-1 sm:w-[200px] sm:flex-none z-[45]">
+                <button id="category-dropdown-btn" onclick="toggleDropdown()" class="w-full px-4 md:px-6 py-3 md:py-3.5 bg-white/95 backdrop-blur-md rounded-full shadow-md border border-accent/60 flex justify-between items-center text-primary font-semibold transition-all text-sm md:text-base">
+                    <span id="category-dropdown-text" class="truncate mr-2">All Categories</span>
+                    <svg class="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 flex-shrink-0" id="category-dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="category-dropdown-menu" class="absolute left-0 right-0 mt-3 bg-white rounded-[2rem] shadow-xl border border-accent/30 overflow-hidden opacity-0 pointer-events-none transform -translate-y-4 transition-all duration-300 z-50">
+                    <div id="category-nav" class="max-h-[60vh] overflow-y-auto py-3 custom-scrollbar flex flex-col">
+                        <!-- options injected via JS -->
+                    </div>
+                </div>
+            </div>
+            <div class="relative w-full sm:flex-1 mt-1 sm:mt-0 order-first sm:order-none">
+                <div class="absolute inset-y-0 left-0 pl-4 md:pl-5 flex items-center pointer-events-none">
+                    <svg class="w-4 h-4 md:w-5 md:h-5 text-primary/50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <input type="text" id="menu-search" oninput="searchMenu(this.value)" placeholder="Search the menu..." class="w-full pl-10 md:pl-12 pr-4 md:pr-6 py-3 md:py-3.5 bg-white/95 backdrop-blur-md rounded-full shadow-md border border-accent/60 text-primary font-medium transition-all text-sm md:text-base placeholder-primary/50 focus:outline-none focus:border-primary/40 focus:ring-2 focus:ring-primary/10">
+            </div>
+        </div>
+
+        <div id="menu-skeleton" class="hidden transition-all duration-300 opacity-0 pointer-events-none">
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-8">
+                <!-- Skeleton 1 -->
+                <div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden animate-[pulse_1.5s_ease-in-out_infinite]">
+                    <div class="w-32 h-8 bg-[#D5C7B5] opacity-20 rounded-md mb-6"></div>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between items-baseline mb-2">
+                                <div class="w-1/2 h-5 bg-primary opacity-10 rounded"></div>
+                                <div class="w-10 h-5 bg-primary opacity-10 rounded"></div>
+                            </div>
+                            <div class="w-3/4 h-3 bg-primary opacity-5 rounded mt-3"></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-baseline mb-2">
+                                <div class="w-2/3 h-5 bg-primary opacity-10 rounded"></div>
+                                <div class="w-10 h-5 bg-primary opacity-10 rounded"></div>
+                            </div>
+                            <div class="w-1/2 h-3 bg-primary opacity-5 rounded mt-3"></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-baseline mb-2">
+                                <div class="w-1/3 h-5 bg-primary opacity-10 rounded"></div>
+                                <div class="w-10 h-5 bg-primary opacity-10 rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skeleton 2 -->
+                <div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden animate-[pulse_1.5s_ease-in-out_infinite]" style="animation-delay: 0.15s;">
+                    <div class="w-40 h-8 bg-[#D5C7B5] opacity-20 rounded-md mb-6"></div>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between items-baseline mb-2">
+                                <div class="w-2/3 h-5 bg-primary opacity-10 rounded"></div>
+                                <div class="w-12 h-5 bg-primary opacity-10 rounded"></div>
+                            </div>
+                            <div class="w-4/5 h-3 bg-primary opacity-5 rounded mt-3"></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-baseline mb-2">
+                                <div class="w-1/2 h-5 bg-primary opacity-10 rounded"></div>
+                                <div class="w-12 h-5 bg-primary opacity-10 rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skeleton 3 -->
+                <div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden animate-[pulse_1.5s_ease-in-out_infinite]" style="animation-delay: 0.3s;">
+                    <div class="w-28 h-8 bg-[#D5C7B5] opacity-20 rounded-md mb-6"></div>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between items-baseline mb-2">
+                                <div class="w-3/4 h-5 bg-primary opacity-10 rounded"></div>
+                                <div class="w-10 h-5 bg-primary opacity-10 rounded"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-baseline mb-2">
+                                <div class="w-1/2 h-5 bg-primary opacity-10 rounded"></div>
+                                <div class="w-10 h-5 bg-primary opacity-10 rounded"></div>
+                            </div>
+                            <div class="w-full h-3 bg-primary opacity-5 rounded mt-3"></div>
+                            <div class="w-2/3 h-3 bg-primary opacity-5 rounded mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu-kyd" class="hidden transition-all duration-500 ease-in-out opacity-0">
+<div class="columns-1 md:columns-2 lg:columns-3 gap-8"><div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Coffee</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Espresso</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">100</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Americano</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">200</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Iced Americano</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">240</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Cloudy Americano</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">240</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Peach Americano</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">250</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Cortado</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">200</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Cappuccino</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">220</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Iced Cappuccino</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">250</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Cinnamon Cappuccino</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">250</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Latte</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">240</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Iced Latte</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">280</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Lavender Latte</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Vanilla Latte</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">250</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Salted Caramel Coffee</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Hazlenut Coffee</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Cold Coffee 280.</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Fresh Juices</h2>
+<p class="text-sm text-primary/70 mt-2 mb-6 italic border-l-2 border-accent pl-3">Cold Pressed Juices - No Added Sugars</p>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Good For Heart</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">apple. beetroot. carrot. ginger.</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Good For Gut</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">green apple. spinach, celery. cucumber. mint</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Good For Skin</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">orange. basil.</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Good For All</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Beverages & Kombucha</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Barley Detox</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">250</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Summer Coolers</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">250</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Sugarcane Blend</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">250</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Finest Hot Chocolate (November-February) 350.</h3>
+</div>
+</div>
+<div class="pt-4 mt-2 border-t border-accent/40"><h4 class="font-serif text-[1.1rem] text-primary/90 mb-3 font-semibold">House Brewed Kombucha (Sugar Free - Gluten Free & contains Healthy Pro-Biotics):</h4></div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Burnt Lemon Pepper Berry</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">350</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Thai Tamarind</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">350</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Cherry Cola</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">350</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Ginger</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">350</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Raspberry Blast 350.</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Desserts & House Special</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Lemon Blueberry Tea Slice</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">180</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Coconut Jaggery Tea Slice (Sugar Free/Gluten Free)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">200</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Oats Cranberry Slice (Sugar Free/Gluten Free)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">200</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Cheesecake of the Day</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">320</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Babka Pain Perdu</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">All Day Eggs</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Eggs Bordeaux</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">380</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Classic French Omlette</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Bharooch Akuri</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Parsi scrambled eggs in house ground spice blend and topped with carrot bajra croutons and crumbled feta</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Posh Omelette</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">450</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Omelette stuffed with Asparagus, Parsley, Gorgonzola & Walnuts</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">New York Poached Eggs</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">500</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Gooey poached eggs on house-made brioche buns with a cream of spinach and freshly made Hollandaise sauce</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Bacon Philly Poached Eggs</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">580</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Gooey poached eggs on a bed of creamy bacon and drizzled with freshly made Hollandaise sauce</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Eggs Wrap</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">480</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">A Gluten Free wrap made with Eggs and filled with mushrooms, onions, cherry tomatoes and cheese - you can choose your own stuffings too</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Japanese Egg Sando</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Salads</h2>
+<p class="text-sm text-primary/70 mt-2 mb-6 italic border-l-2 border-accent pl-3">All our salads are Gluten Free, Vegan Options Available</p>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Motherland Signature Greens</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">450</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Your daily dose of minerals and greens with apples, water chestnuts, baby mozzarella and truffle oil vinaigrette</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Cold Soba Noodle Salad</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">English cucumber, fresh peppers, carrots and celery tossed in a house made Fujian dressing and cold soba noodles</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Quinoa Salad</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">450</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Quinoa tossed with Bell Peppers, Mangoes or Avos, Tomatoes and an orange vinegrette</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Healthy Warm Salad</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">520</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Roasted beetroot, carrots & broccoli served with poached pears, asparagus and optional amaranth on a bed of blue cheese dressing & tomato</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Motherland Protein Fix</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">580</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Your daily dose of minerals and greens with grilled chicken, apples, water chestnuts, baby mozzarella and truffle vinaigrette</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Vegan Fitness Salad</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">480</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Roasted sweet potato and chickpea salad with spinach and avocado dressing</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Burrata in Wonderland</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">650</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Buckwheat Crepes</h2>
+<p class="text-sm text-primary/70 mt-2 mb-6 italic border-l-2 border-accent pl-3">Vegetarian Gluten Free</p>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Brittany Crepe</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">620</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Filling of Wild Mushrooms, cheese crumble, Spinach & Onion Jam</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Caprese Crepe</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">620</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Filling of Mozzarella, Tomatoes in Pesto and Arugula with a vinaigrette</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Libyan Crepe</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">620</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Filling of Hummus, Feta, Grilled Peppers, Zucchini and Fresh Mushrooms & Tomatoes</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Farmhouse Crepe</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">680</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Bagels</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Everything Bagel</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Pesto Cream Cheese</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">350</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Tomato Avocado</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Caramalized Onion Mushroom</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">380</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Egg and Bacon 450.</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Between Breads</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Caprese Panini</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">350</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Classic Tomato, Petit Mozzarella and Pesto</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Pobis Treat</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">350</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Barbequed Exotic Vegetables grilled and then toasted in between house Panini</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Chef's Chicken Sando</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Pesto marinated Chicken with herbs inbetween house Panini</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Barbecued Chicken Sando</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Smoked Chicken with herbs in between house Panini and lots of flavor</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Famous Grilled Cheese</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Four Cheese - Parmesan - Gorgonzola - Mozzarella - Aged Cheddar loaded in between a Ragi Sourdough with hints of Smoked Paprika - grilled in butter to perfection</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Napoli</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">450</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Housemade Marinara sauce lathered on a Ragi Sourdough and grilled with fresh Mozzarella and basil</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Chef's Special Tartine</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">520</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Small Bites</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Have-A-Cado on Toast</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">V) 480 (Creamy Avocado Mash served on a slice of Charcoal Bread, topeed with feta crumble, olives, tomatoes & our secret dressing</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Beirut Bowl</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">480</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Chickpea and Sesame Hummus with chargrilled exotic vegetables and toasted carrot bajra breads</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Shroom Brioche</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">V) 520 (Wild mushrooms coated in buttered garlic and cream on top of our speical brioche buns</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Texas Wrap (Housemade Tortilla loaded with cheese, grilled vegetables and red beans soaked and mashed with house blend spices)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">Veg 450 / Chi 520</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Arabian Wrap</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">480</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Slow cooked chicken wrapped in housemade pita and served with smokey handcut fries</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Korean Egg Roll</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">450</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Big Bites</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Verdure Firenze</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">GF) 620 (Brown Rice, Oats, Barley Risotto cooked with parmesan, honey and chilli. Served with fresh spinach puree and sour cream</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Mount Olympus</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">720</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Pan Roasted Chicken Breast stuffed with Bell Peppers, Olives, Capers, Basil and Cheese served on a bed of Pizzaiola Sauce</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Cracked Potato with Thai Asparagus (GF)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">680</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Grilled Chicken with Shroom Pepper</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">680</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Chicken marinated in Turkish spices and grilled to perfection with veggies and mushroom pepper sauce</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Farmers Hot Pot</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">620</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Quinoa Tomatina Olio</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">580</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Handrolled Pasta & Gnocchi</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Sicilian Tortellini</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">600</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Handmade Tortellini stuffed with sweet corn and cream cheese mousse cooked in a house speical tomato olive broth</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Romagna Tortellini</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">600</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Handmade Tortellini stuffed with spinach and ricotta - cooked in a housemade tomato ragout and drizzled with burnt butter</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Gluten Free Pasta</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">620</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Handmade Gluten Free Pasta rings in a soupy vegan broth that is healthy and loaded with flavor</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Truffle Pasta</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">600</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Handrolled pasta made at our speciality kitchen tossed in creamy truffle sauce</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Fresh Hand Cut Fettuccini</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">580</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Handrolled Fettuccini pasta made at our speciality kitchen and served in either Arrabiata Italian Tomato Sauce or Alfredo</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Scopiare</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">680</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Fresh Raviolis filled with creamy Burrata and tossed in carrot sauce and garnished with toasted nuts</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Carbonara</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">680</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Authentic Italian Fettuccine with Bacon and Egg Carbonara - cooked in the original Itallian method</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Poppy Gnocchi</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">580</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Handmade Gnocchi in Gorgonzola sauce, dressed with roasted Poppy Seeds & Nuts</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Pesto Gnocchi</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">580</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Handmade Gnocchi in housemade Italian Basil Pesto</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Buttered Spinach Gnocchi</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">580</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Risotto & Pizzas</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Riso de Campania</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">580</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Creamy orborio rice cooked with tomatoes and parmesan</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Pesto Risotto</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">580</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Cooked with housemade fresh Pesto and cream - can be done with garlic</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Ragi Pizza</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">House Speciality) 780 (Neapolitan Pizza made using Ragi flour - customie this as per your fancy. Go wild. Go Vegan. Go Classic. Your choice</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Pizza Bianca</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">780</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+        </div>
+
+        <div id="menu-southern" class="hidden opacity-0 transition-all duration-500 ease-in-out">
+<div class="columns-1 md:columns-2 lg:columns-3 gap-8"><div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Coffee & Beverages</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Americano</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">200</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Iced Americano</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">220</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Aerocano</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">240</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Cortado</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">180</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Iced Cortado</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">200</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Cappuccino</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">220</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Cinnamon Cappuccino</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">220</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Iced Cappuccino/Iced Latte</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">240</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Latte</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">220</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Peach Americano (Hazelnut/Vanilla/Lavender)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">240</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Lavender Latte (Iced/Hot)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Vanilla Latte (Iced/Hot)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Salted Caramel Coffee (Iced/Hot)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Hazelnut Coffee (Iced/Hot)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Hot Tea (Tea of The Month)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">220</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Iced Tea</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">250</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Matcha Latte (Iced/Hot)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">350</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Hot Chocolate / Hot Mocha 350.</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Cold Pressed Fresh Juices & House Brewed Kombucha</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Good For Heart</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">apple. beetroot. carrot. ginger</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Good For Gut</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">green apple. spinach. celery. cucumber. mint</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Good For Skin</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">orange. basil</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Good For Lungs</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="pt-4 mt-2 border-t border-accent/40"><h4 class="font-serif text-[1.1rem] text-primary/90 mb-3 font-semibold">Kombucha:</h4></div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Burnt Lemon Pepper Berry</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Thai Tamarind</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Cherry Cola</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Ginger Pop</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Berry Blast 300.</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Vegan Smoothies</h2>
+<p class="text-sm text-primary/70 mt-2 mb-6 italic border-l-2 border-accent pl-3">Sugar Free - Gluten Free</p>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Green Smoothie</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">380</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">avocado. spinach. banana</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Purple Smoothie</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">380</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">blueberries. banana. cinnamon</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Almond Peanut Smoothie</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">380</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">peanut butter. banana. almonds</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Mixed Berry Smoothie</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Soups</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Signature Pumpkin & Zucchini</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">380</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Roasted pumpkin blended with zucchini, parmesan and thyme - can be made with almond milk</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Florentine Lentil Soup</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">380</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Salads</h2>
+<p class="text-sm text-primary/70 mt-2 mb-6 italic border-l-2 border-accent pl-3">All our salads are Gluten Free - Vegan Options Available</p>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Peruvian Super Green Salad (Guest Favorite) 520 (Quinoa tossed in a lemon cilantro vinaigrette with avocados, lettuce, arugula, cherry tomatoes, olives, oranges, dried cranberries & healthy seeds) Add Grilled Chicken</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">150</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Japanese Gluten Free Salad</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Vegan) 480 (Soba Noodles tossed with grilled peppers, carrots, cucumber, cherry tomatoes & sweet potato tossed in a house made Japanese umami dressing topped with seasme seeds and nuts</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Sicilian Spring Salad</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Recommended) 450 (Arugula, bell peppers, cucumber, onions tossed with black lentils, olives in a honey mustard vinaigrette and topped with feta, herbs and candied nuts</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Moroccan Cous Cous Salad</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Vegan) 450 (Kale & lettuce tossed with couscous, olives, mint, cherry tomatoes in a light house dressing and topped with chopped dates & ragi croutons</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Kale & Avocado Salad</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">520</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Kale & Avos in a creamy house dressing tossed with sourdough croutons, blueberries & tomatoes</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Goat's Cheese Avocado Salad</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">540</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">All Day Eggs</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Eggs Bordeaux</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">420</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Eggs Bombay</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">450</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">A classic fold over omelette served with cheddar, onions, tomatoes and green chillies with roasted potatoes & GF bread on the side</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Texas Poached Eggs</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Recommended) 520 (Two poached eggs on house brioche buns lathered with avocado mash - topped with spicy harissa holladainse</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Eggs Istanbul</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">420</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Poached eggs on a bed of garlic herbed yogurt drizzled with spicy butter, olive oil topped with dill, seed crackers and served with pita</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Garlic Scrambled Eggs</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">450</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Eggs scrambled to a creamy texture with house chili oil and garlic served on a taosted sourdough with a sunny side up</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Eggs Amalfi (Recommended)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">480</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Tartines</h2>
+<p class="text-sm text-primary/70 mt-2 mb-6 italic border-l-2 border-accent pl-3">Served on Housemade GF Sourdough</p>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Shroom Delight</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">House Favorite) 400 (Olive oil toasted Sourdough with whipped ricotta topped with sautéed wild mushrooms, cherry tomatoes, arugula & parmesan drizzled with balsamic dressing</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Mongolian Egg Tartine</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">380</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Eggs scrambled in a house asian sauce and spread on top of our popular sourdough topped with sesame, scallions & chillies</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Vietnamese Tofu Tartine</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Recommended) 420 (House sourdough topped with grilled tofu tossed in a house peanut dressing and topped with chilli oil and arugula</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Via Beirut</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Sourdough with hummus and pan tossed chickpeas, grilled veggies and lemon</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Chicken München</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">For The Meat Lovers) 480 (Chicken cooked in a house BBQ sauce then baked with some sriracha and English cheddar</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Via Mexico</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Recommended) 480 (Oats sourdough with a generous Peruvian Avocado mash, jalapeños, green chillies and goats cheese</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Olive Garden Tartine</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Between Breads & From The Oven</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Beaten Pesto Panini</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">House Favorite) 400 (Exotic veggies tossed in our popular beaten pesto grilled with cheddar</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Tofu & Olive Tapenade</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Oats panini filled with marinated Japanese tofu & olive tapenade</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Pesto Chicken</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Panini filled with pesto chicken, tomatoes and grilled cheese</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Baked Zucchini Pot</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Signature) 580 (House tomato ragu tossed in vegetables covered with delicate layers of zucchini sheets and baked with parmesan sauce in a skillet</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Truffle Broccoli</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Signature) 580 (Broccoli steak blanched in rosemary and baked in the oven with a house mushroom sauce and fresh mozzarella with hints of truffle</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Eggs Maghreb</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">450</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Free range eggs baked in a skillet with a house tomato sauce & spices topped with herbs and served with a sourdough</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Stuffed Pasta Roulade (Recommended)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">580</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Small Bites & Turkiye Meze Bar</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Rosemary Baked Potatoes</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">House Favorite) 380 (Young potatoes baked with rosemary & garlic in the oven served with ricotta and vegan house made mayonnaise</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Quattro Fromaggi Sourdough Bites</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">380</span>
+</div>
+</div>
+<div class="pt-4 mt-2 border-t border-accent/40"><h4 class="font-serif text-[1.1rem] text-primary/90 mb-3 font-semibold">Meze:</h4></div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Beirut Hummus</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">100</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Beetroot Hummus</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">120</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Mixed Cheese</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">150</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Avocado Mash</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">150</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">GF Seed Cracker</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">180</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Beetroot Pita</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">120</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Bagel Chips</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">120</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Beaten Pesto</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">150</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Muharrmmara</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">150</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Marinated Olives</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">150</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Turkish Yogurt</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">150</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Herbed Pita</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">100</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Carrot Bajra Toast</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">120</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Tabouleh 120.</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Bagel Bar</h2>
+<p class="text-sm text-primary/70 mt-2 mb-6 italic border-l-2 border-accent pl-3">Our Popular Housemade Everything Bagel</p>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Classic</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">350</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Classic pairing of a well toasted bagel with cream cheese, tomatoes and pickled onion</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Bagel Bin Laden</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Guest Favorite) 380 (Toasted Bagels filled with garlicy hummus, pickled onions, cucumber, avocado, olives and dill</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">New York Bagel</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">380</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Bagel filled with cream cheese, lettuce, tomato, egg drizzled with balsamic - (can be made eggless) - Add Cheddar 50</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Spring Bagel</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">350</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Toasted bagel filled with pepper cream cheese topped with an onion salad tossed in a honey vinaigrette</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Shroom Bagel</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">380</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Bagel served with caramelized mushrooms and spinach with slight flavour of chilli oil</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Bagel Platter</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">480</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">A toasted bagel served with pesto, cream cheese, tomatoes, avocados, chopped chillies</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Extra Bagels 200.</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Big Bites</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Quinoa Risotto</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Signature) 580 (Quinoa slow cooked with roasted beetroots and thyme, served with almonds, herbed feta and parmesan</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Osaka Olio</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Signature) 580 (Gluten Free buckwheat linguine pan tossed with garlic, broccoli, mushrooms, cherry tomatoes, peppers & topped with parmesan</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Fettuccine in Butter Chili Sauce</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Guest Favorite) 580 (Housemade fettuccine cooked in a comforting butter & chili reduction and topped with some herbs</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Fettuccine in Beaten Pesto</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">580</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Housemade fettuccine tossed in our signature pesto and served with some parmesan</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Jowar Protein Bowl</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Signature) 680 (Herbed organic Jowar rice served with house lentil sauce, grilled tofu, exotic vegetables and slices of Avocado</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Fettuccine in Milanese Sauce</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">580</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Fettuccine in a vegan garlic emulsification with parsley and sourdough pangrattato</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Soba Napoletana</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">580</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Chicken Big Bite</h2>
+<div class="mb-5"></div>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Chicken Roulade</h3>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Signature) 750 (Hammered chicken stuffed with English cheddar, tomato coulis, veggies and cheese then grilled and served with a pumpkin mash</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Signature Roast Chicken</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">680</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">Roast Chicken served with a black lentil sauce, grilled veggies & fluffy jowar rice</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Fettuccine in Truffle Chicken</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">680</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">House made fettuccine tossed in creamy mushroom with truffle, grilled chicken and served with some parmesan</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Fettuccine in Pesto Chicken</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">680</span>
+</div>
+<p class="text-[0.9rem] mt-1.5 text-primary/75 leading-relaxed">House made fettuccine tossed in our signature pesto and grilled chicken and served with some parmesan</p>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Vietnamese Chicken with Jowar Rice</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">680</span>
+</div>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-accent/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[4rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+<h2 class="text-2xl font-serif text-primary mb-2 border-b-2 border-accent pb-2">Dessert Bar</h2>
+<p class="text-sm text-primary/70 mt-2 mb-6 italic border-l-2 border-accent pl-3">All desserts are made in house</p>
+<div class="space-y-4">
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Guilt Free Chocolate Mousse (Vegan Gluten Free Sugar Free)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">400</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Almond Flour Chocolate Cake (Gluten Free Sugar Free)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">320</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Almond Flour Date Walnut (Gluten Free Sugar Free)</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">300</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Basque Cheesecake</h3>
+<span class="font-serif text-[1.1rem] font-medium text-primary whitespace-nowrap bg-menu px-2 py-0.5 rounded border border-accent/30 shadow-sm">350</span>
+</div>
+</div>
+<div class="group/item">
+<div class="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+<h3 class="font-bold text-[1.05rem] leading-tight flex-1 text-primary">Ragi Carrot Cake 280.</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+        </div>
+    </main>
+
+    <footer class="bg-primary text-menu/90 py-12 md:py-16 text-center border-t-8 border-accent rounded-t-[3rem] mt-12 overflow-hidden relative">
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, #D5C7B5 1px, transparent 0); background-size: 32px 32px;"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="h-10 mx-auto mb-8 opacity-80 fill-current">
+                <rect x="44" y="5" width="12" height="90" />
+                <rect x="44" y="5" width="12" height="90" transform="rotate(60 50 50)" />
+                <rect x="44" y="5" width="12" height="90" transform="rotate(120 50 50)" />
+            </svg>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 w-full max-w-4xl mx-auto mb-10 border-t border-menu/20 pt-8 mt-2">
+                <div class="flex flex-col items-center md:items-end md:text-right">
+                    <span class="text-accent mb-2 uppercase tracking-widest text-xs font-semibold">Location</span>
+                    <p id="footer-address" class="text-lg md:text-xl font-serif text-menu/90 mb-0">Block-D, A/3 Dr. Md. Ishaque Road, Kolkata, WB 700016</p>
+                </div>
+                <div class="flex flex-col items-center md:items-start md:text-left">
+                    <span id="footer-contact-label" class="text-accent mb-2 uppercase tracking-widest text-xs font-semibold">Contact</span>
+                    <p id="footer-contact" class="text-lg md:text-xl font-serif text-menu/90 mb-0">097480 77790</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm font-medium mt-12 pt-8 border-t border-menu/10 gap-6 md:gap-4 w-full">
+                <p class="opacity-50 tracking-wider uppercase md:text-left">&copy; 2024 Motherland Cafe. All Rights Reserved.</p>
+                
+                <div class="flex items-center gap-6">
+                    <a href="https://terrestrialyt.com/" target="_blank" rel="noopener noreferrer" class="opacity-75 tracking-wider italic hover:text-accent hover:opacity-100 transition-colors">made by TerrestrialYT with love ❤️</a>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <a href="https://www.instagram.com/motherland.studios.cafe/" target="_blank" rel="noopener noreferrer" class="opacity-75 hover:opacity-100 hover:text-accent transition-transform hover:-translate-y-1">
+                        <span class="sr-only">Instagram</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/motherland.studios.kolkata/" target="_blank" rel="noopener noreferrer" class="opacity-75 hover:opacity-100 hover:text-accent transition-transform hover:-translate-y-1">
+                        <span class="sr-only">Facebook</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a href="https://wa.me/919748077790" target="_blank" rel="noopener noreferrer" class="opacity-75 hover:opacity-100 hover:text-[#25D366] transition-transform hover:-translate-y-1">
+                        <span class="sr-only">WhatsApp</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function toggleLocation(location) {
+            const kydMenu = document.getElementById('menu-kyd');
+            const southernMenu = document.getElementById('menu-southern');
+            const btnKyd = document.getElementById('btn-kyd');
+            const btnSouthern = document.getElementById('btn-southern');
+            const footerAddress = document.getElementById('footer-address');
+            const footerContactLabel = document.getElementById('footer-contact-label');
+            const footerContact = document.getElementById('footer-contact');
+            const skeleton = document.getElementById('menu-skeleton');
+
+            // 1. Hide Both Menus Immediately
+            kydMenu.classList.add('hidden', 'opacity-0');
+            kydMenu.classList.remove('opacity-100');
+            southernMenu.classList.add('hidden', 'opacity-0');
+            southernMenu.classList.remove('opacity-100');
+
+            // 2. Show Skeleton Loader
+            skeleton.classList.remove('hidden');
+            setTimeout(() => skeleton.classList.remove('opacity-0'), 10);
+
+            // 3. Update active states and logic
+            if (location === 'kyd') {
+                btnKyd.classList.add('bg-primary', 'text-menu', 'shadow-md');
+                btnKyd.classList.remove('text-primary', 'hover:bg-primary/5');
+                
+                btnSouthern.classList.remove('bg-primary', 'text-menu', 'shadow-md');
+                btnSouthern.classList.add('text-primary', 'hover:bg-primary/5');
+                
+                footerAddress.innerHTML = "Block-D, A/3 Dr. Md. Ishaque Road, Kolkata, WB 700016";
+                footerContactLabel.innerHTML = "Contact";
+                footerContact.innerHTML = "097480 77790";
+            } else {
+                btnSouthern.classList.add('bg-primary', 'text-menu', 'shadow-md');
+                btnSouthern.classList.remove('text-primary', 'hover:bg-primary/5');
+                
+                btnKyd.classList.remove('bg-primary', 'text-menu', 'shadow-md');
+                btnKyd.classList.add('text-primary', 'hover:bg-primary/5');
+                
+                footerAddress.innerHTML = "Southern Avenue, Kolkata";
+                footerContactLabel.innerHTML = "Hours";
+                footerContact.innerHTML = "11 AM onwards";
+            }
+
+            // 4. Hide Skeleton after delay and show target menu
+            setTimeout(() => {
+                skeleton.classList.add('opacity-0');
+                setTimeout(() => {
+                    skeleton.classList.add('hidden');
+                    if (location === 'kyd') {
+                        kydMenu.classList.remove('hidden');
+                        setTimeout(() => kydMenu.classList.remove('opacity-0', 'pointer-events-none'), 10);
+                        setTimeout(() => kydMenu.classList.add('opacity-100'), 20);
+                    } else {
+                        southernMenu.classList.remove('hidden');
+                        setTimeout(() => southernMenu.classList.remove('opacity-0', 'pointer-events-none'), 10);
+                        setTimeout(() => southernMenu.classList.add('opacity-100'), 20);
+                    }
+                }, 300); // Wait for fade out
+            }, 600); // Artificial loading time
+            
+            // Clear search when switching tabs
+            const searchInput = document.getElementById('menu-search');
+            if (searchInput) {
+                searchInput.value = '';
+                searchMenu('');
+            }
+            
+            // Update filter navigation and reset filter
+            setTimeout(() => {
+                updateCategoryNav();
+                filterCategory('All');
+            }, 350);
+        }
+
+        let filterState = {
+            category: 'All Categories',
+            search: '',
+            priceFilter: 'all',
+            priceSort: 'default'
+        };
+
+        function toggleDropdown() {
+            const menu = document.getElementById('category-dropdown-menu');
+            const icon = document.getElementById('category-dropdown-icon');
+            if (menu.classList.contains('opacity-0')) {
+                menu.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
+                menu.classList.add('opacity-100', 'translate-y-0');
+                if (icon) icon.classList.add('rotate-180');
+            } else {
+                menu.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
+                menu.classList.remove('opacity-100', 'translate-y-0');
+                if (icon) icon.classList.remove('rotate-180');
+            }
+        }
+
+        function togglePriceDropdown() {
+            const menu = document.getElementById('price-dropdown-menu');
+            if (menu.classList.contains('opacity-0')) {
+                menu.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
+                menu.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                menu.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
+                menu.classList.remove('opacity-100', 'translate-y-0');
+            }
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            const catBtn = document.getElementById('category-dropdown-btn');
+            const catMenu = document.getElementById('category-dropdown-menu');
+            if (catBtn && catMenu && !catBtn.contains(e.target) && !catMenu.contains(e.target) && !catMenu.classList.contains('opacity-0')) {
+                toggleDropdown();
+            }
+            const priceBtn = document.getElementById('price-dropdown-btn');
+            const priceMenu = document.getElementById('price-dropdown-menu');
+            if (priceBtn && priceMenu && !priceBtn.contains(e.target) && !priceMenu.contains(e.target) && !priceMenu.classList.contains('opacity-0')) {
+                togglePriceDropdown();
+            }
+        });
+
+        function updateCategoryNav() {
+            const activeMenu = document.getElementById('menu-kyd').classList.contains('hidden') ? document.getElementById('menu-southern') : document.getElementById('menu-kyd');
+            const navContainer = document.getElementById('category-nav');
+            if(!navContainer) return;
+
+            const categories = Array.from(activeMenu.querySelectorAll('h2')).map(h2 => h2.innerText);
+            
+            let navHtml = `<button onclick="filterCategory('All')" class="w-full text-left px-6 py-3 font-semibold text-base transition-colors bg-primary/10 text-primary category-btn" data-category="All">All Categories</button>`;
+            
+            categories.forEach(cat => {
+                navHtml += `<button onclick="filterCategory('${cat}')" class="w-full text-left px-6 py-3 font-medium text-base transition-colors text-primary/80 hover:bg-primary/5 hover:text-primary category-btn" data-category="${cat}">${cat}</button>`;
+            });
+            
+            navContainer.innerHTML = navHtml;
+        }
+
+        function filterCategory(categoryName) {
+            filterState.category = categoryName === 'All' ? 'All Categories' : categoryName;
+            
+            const dropdownText = document.getElementById('category-dropdown-text');
+            if(dropdownText) dropdownText.innerText = filterState.category;
+
+            const menu = document.getElementById('category-dropdown-menu');
+            if (menu && !menu.classList.contains('opacity-0')) toggleDropdown();
+
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                if(btn.dataset.category === categoryName) {
+                    btn.classList.add('bg-primary/10', 'font-semibold', 'text-primary');
+                    btn.classList.remove('font-medium', 'text-primary/80', 'hover:bg-primary/5', 'hover:text-primary');
+                } else {
+                    btn.classList.remove('bg-primary/10', 'font-semibold', 'text-primary');
+                    btn.classList.add('font-medium', 'text-primary/80', 'hover:bg-primary/5', 'hover:text-primary');
+                }
+            });
+
+            applyFilters();
+            
+            if(categoryName !== 'All') {
+                const navContainerNode = document.getElementById('nav-container');
+                if (navContainerNode) {
+                    const y = navContainerNode.getBoundingClientRect().top + window.scrollY - 20;
+                    window.scrollTo({top: y, behavior: 'smooth'});
+                }
+            }
+        }
+
+        function searchMenu(query) {
+            filterState.search = query.toLowerCase();
+            applyFilters();
+        }
+
+        function setPriceFilter(filterType) {
+            filterState.priceFilter = filterType;
+            document.querySelectorAll('.price-filter-btn').forEach(btn => {
+                 if (btn.dataset.filter === filterType) {
+                      btn.classList.add('bg-primary/10', 'text-primary', 'font-bold');
+                      btn.classList.remove('font-medium', 'text-primary/80', 'hover:bg-primary/5', 'hover:text-primary');
+                 } else {
+                      btn.classList.remove('bg-primary/10', 'text-primary', 'font-bold');
+                      btn.classList.add('font-medium', 'text-primary/80', 'hover:bg-primary/5', 'hover:text-primary');
+                 }
+            });
+            togglePriceDropdown();
+            applyFilters();
+        }
+
+        function setPriceSort(sortType) {
+            filterState.priceSort = sortType;
+            document.querySelectorAll('.price-sort-btn').forEach(btn => {
+                 if (btn.dataset.sort === sortType) {
+                      btn.classList.add('bg-primary/10', 'text-primary', 'font-bold');
+                      btn.classList.remove('font-medium', 'text-primary/80', 'hover:bg-primary/5', 'hover:text-primary');
+                 } else {
+                      btn.classList.remove('bg-primary/10', 'text-primary', 'font-bold');
+                      btn.classList.add('font-medium', 'text-primary/80', 'hover:bg-primary/5', 'hover:text-primary');
+                 }
+            });
+            togglePriceDropdown();
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const activeMenu = document.getElementById('menu-kyd').classList.contains('hidden') ? document.getElementById('menu-southern') : document.getElementById('menu-kyd');
+            const searchString = filterState.search;
+            
+            const sections = activeMenu.querySelectorAll('.break-inside-avoid');
+            sections.forEach(section => {
+                let hasVisibleItems = false;
+                const container = section.querySelector('.space-y-6') || section;
+                if (!container.querySelector('.group\\/item')) return;
+                
+                const items = Array.from(container.querySelectorAll('.group\\/item'));
+                
+                // 1. Sort
+                items.sort((a, b) => {
+                    const priceA = parseInt(a.dataset.price) || 0;
+                    const priceB = parseInt(b.dataset.price) || 0;
+                    if (filterState.priceSort === 'asc') return priceA - priceB;
+                    if (filterState.priceSort === 'desc') return priceB - priceA;
+                    return parseInt(a.dataset.originalIndex) - parseInt(b.dataset.originalIndex);
+                });
+                
+                items.forEach(item => container.appendChild(item));
+
+                // 2. Filter
+                items.forEach(item => {
+                    const itemName = item.querySelector('h3').innerText.toLowerCase();
+                    const itemDesc = item.querySelector('p') ? item.querySelector('p').innerText.toLowerCase() : '';
+                    const price = parseInt(item.dataset.price) || 0;
+                    
+                    const matchesSearch = itemName.includes(searchString) || itemDesc.includes(searchString);
+                    let matchesPrice = true;
+                    if (filterState.priceFilter === 'budget') matchesPrice = price < 300;
+                    if (filterState.priceFilter === 'premium') matchesPrice = price >= 300;
+                    
+                    if (matchesSearch && matchesPrice) {
+                        item.classList.remove('hidden');
+                        hasVisibleItems = true;
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+
+                // 3. Category Visibility
+                const categoryTitle = section.querySelector('h2').innerText;
+                const matchesCategory = filterState.category === 'All Categories' || filterState.category === categoryTitle;
+                
+                if (matchesCategory && hasVisibleItems) {
+                    section.classList.remove('hidden');
+                } else if (matchesCategory && !hasVisibleItems && filterState.search === '' && filterState.priceFilter === 'all') {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+
+            const columnsContainer = activeMenu.querySelector('.columns-1');
+            if (filterState.search !== '' || filterState.priceFilter !== 'all') {
+                 columnsContainer.classList.remove('md:columns-2', 'lg:columns-3');
+            } else {
+                 if (filterState.category === 'All Categories') {
+                      columnsContainer.classList.add('md:columns-2', 'lg:columns-3');
+                 } else {
+                      columnsContainer.classList.remove('md:columns-2', 'lg:columns-3');
+                 }
+            }
+        }
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.05
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-8', '-translate-y-4');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.style.transform = 'none'; // Clear inline transforms if any
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        function initObservers() {
+            document.querySelectorAll('.break-inside-avoid').forEach((section, index) => {
+                // Add initial classes for animation
+                if(!section.classList.contains('transition-all') || section.classList.contains('opacity-0')) {
+                    section.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700', 'ease-out');
+                    section.classList.remove('opacity-100', 'translate-y-0');
+                }
+                revealObserver.observe(section);
+            });
+
+            const navContainer = document.querySelector('.sticky.top-4');
+            if (navContainer && !navContainer.classList.contains('transition-all')) {
+                navContainer.classList.add('opacity-0', '-translate-y-4', 'transition-all', 'duration-700', 'ease-out');
+                revealObserver.observe(navContainer);
+            }
+        }
+
+        // Initialize category nav on load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.space-y-6').forEach(container => {
+                Array.from(container.children).forEach((child, index) => {
+                    if (child.classList.contains('group/item')) {
+                        child.dataset.originalIndex = index;
+                        const priceEl = child.querySelector('.font-mono');
+                        if (priceEl) {
+                            const priceMatch = priceEl.innerText.replace(/[^0-9]/g, '');
+                            child.dataset.price = priceMatch ? parseInt(priceMatch, 10) : 0;
+                        } else {
+                            child.dataset.price = 0;
+                        }
+                    }
+                });
+            });
+
+            updateCategoryNav();
+            initObservers();
+            
+            // Back to top button logic
+            const backToTopBtn = document.getElementById('back-to-top');
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > (header ? header.offsetHeight : 300)) {
+                    backToTopBtn.classList.remove('opacity-0', 'translate-y-8', 'pointer-events-none');
+                    backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'translate-y-8', 'pointer-events-none');
+                    backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+                }
+            });
+
+            // Initial visual loader
+            toggleLocation('kyd');
+        });
+    </script>
+
+    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 bg-primary text-menu p-3 md:p-4 rounded-full shadow-xl opacity-0 translate-y-8 pointer-events-none transition-all duration-300 z-50 hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/20">
+        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+</body>
+</html>
